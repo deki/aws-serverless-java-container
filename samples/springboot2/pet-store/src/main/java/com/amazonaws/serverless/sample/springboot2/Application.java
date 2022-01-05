@@ -1,7 +1,5 @@
 package com.amazonaws.serverless.sample.springboot2;
 
-import com.amazonaws.serverless.sample.springboot2.controller.PetsController;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @SpringBootApplication
-@Import({ PetsController.class })
+@Import({ JerseyConfig.class, PetsResource.class })
 public class Application {
 
     // silence console logging
