@@ -28,6 +28,7 @@ public class HttpApiV2ProxyRequestContext {
 
     private HttpApiV2HttpContext http;
     private HttpApiV2AuthorizerMap authorizer;
+    private HttpApiV2Authentication authentication;
 
     public String getAccountId() {
         return accountId;
@@ -115,6 +116,14 @@ public class HttpApiV2ProxyRequestContext {
 
     public void setAuthorizer(HttpApiV2AuthorizerMap authorizer) {
         this.authorizer = authorizer;
+    }
+
+    public HttpApiV2Authentication getAuthentication() {
+        return authentication;
+    }
+
+    public void setAuthentication(HttpApiV2Authentication authentication) {
+        this.authentication = authentication;
     }
 
 }
